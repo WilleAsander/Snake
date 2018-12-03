@@ -22,7 +22,7 @@ document.getElementById('page').addEventListener('keydown', keyListener);
 document.getElementById("startknapp").addEventListener('click', starter);
 document.getElementById("scorebox").innerHTML = "Poäng: " + score + "<br>" + "Level: " + level + "<br>" + "Maten flyttas om: " + matTimer;
 
-rektangel(ctx,x1,y1,10,10,"green");
+rektangel(ctx,x1,y1,10,10,"purple");
 
 function starter () { // Ändrar värdet på startpause får att kunna byta startknappen till en stopknapp
 
@@ -61,7 +61,7 @@ function matFlyttare() {
 				y1 = (Math.floor(Math.random()*10))*40 + 10;
 			}
 		}
-		rektangel(ctx,x1,y1,10,10,"green");
+		rektangel(ctx,x1,y1,10,10,"purple");
 		matTimer = 10;
 	}
 	
@@ -131,13 +131,13 @@ function svans () {
 	
 	for (var i = 0; i < xorm.length; i++) {
 		if (i==0) {
-			rektangel(ctx,xorm[0],yorm[0],10,10,"#e0a721");
+			rektangel(ctx,xorm[0],yorm[0],10,10,"yellow");
 		}//huvudet
 		else if (i%2==0) {
-			rektangel(ctx,xorm[i],yorm[i],10,10,"#e0a721");
+			rektangel(ctx,xorm[i],yorm[i],10,10,"yellow");
 		}//svansen
 		else  {
-			rektangel(ctx,xorm[i],yorm[i],10,10,"black");
+			rektangel(ctx,xorm[i],yorm[i],10,10,"red");
 		}//svansen
 	}
 
@@ -240,11 +240,11 @@ function updateCanvas () {
 
 	ctx.clearRect(0,0,400,400);
 	if (startpause == 1) {
-		rektangel(ctx,x1,y1,10,10,"green"); // ritar ut maten
+		rektangel(ctx,x1,y1,10,10,"purple"); // ritar ut maten
 	}
 	
 	for (var i = 0; i < 20; i++) {
-		rektangel(ctx,x2[i],y2[i],10,10,"red");
+		rektangel(ctx,x2[i],y2[i],10,10,"black");
 	}// Ritar ut de 10 hindren
 
 
