@@ -20,9 +20,9 @@ var matTimer = 10;
 
 document.getElementById('page').addEventListener('keydown', keyListener);
 document.getElementById("startknapp").addEventListener('click', starter);
-document.getElementById("scorebox").innerHTML = "PoÃ¤ng: " + score + "<br>" + "Level: " + level + "<br>" + "Maten flyttas om: " + matTimer;
+document.getElementById("scorebox").innerHTML = "Poäng: " + score + "<br>" + "Level: " + level + "<br>" + "Maten flyttas om: " + matTimer;
 
-rektangel(ctx,x1,y1,10,10,"purple");
+rektangel(ctx,x1,y1,10,10,"green");
 
 function starter () { // Ändrar värdet på startpause får att kunna byta startknappen till en stopknapp
 
@@ -51,7 +51,7 @@ function myStop () { // Stoppar timern
 
 function matFlyttare() {
 	matTimer--;
-	document.getElementById("scorebox").innerHTML = "PoÃ¤ng: " + score + "<br>" + "Level: " + level + "<br>" + "Maten flyttas om: " + matTimer;
+	document.getElementById("scorebox").innerHTML = "Poäng: " + score + "<br>" + "Level: " + level + "<br>" + "Maten flyttas om: " + matTimer;
 	if (matTimer == 0) { // Om timern har nått noll så kommer maten att slumpas ut på en annan plats och timern ställs tillbaka
 		x1 = (Math.floor(Math.random()*10))*40 + 10;
 		y1 = (Math.floor(Math.random()*10))*40 + 10;
@@ -61,7 +61,7 @@ function matFlyttare() {
 				y1 = (Math.floor(Math.random()*10))*40 + 10;
 			}
 		}
-		rektangel(ctx,x1,y1,10,10,"purple");
+		rektangel(ctx,x1,y1,10,10,"green");
 		matTimer = 10;
 	}
 	
@@ -131,13 +131,13 @@ function svans () {
 	
 	for (var i = 0; i < xorm.length; i++) {
 		if (i==0) {
-			rektangel(ctx,xorm[0],yorm[0],10,10,"blue");
+			rektangel(ctx,xorm[0],yorm[0],10,10,"#e0a721");
 		}//huvudet
 		else if (i%2==0) {
-			rektangel(ctx,xorm[i],yorm[i],10,10,"blue");
+			rektangel(ctx,xorm[i],yorm[i],10,10,"#e0a721");
 		}//svansen
 		else  {
-			rektangel(ctx,xorm[i],yorm[i],10,10,"green");
+			rektangel(ctx,xorm[i],yorm[i],10,10,"black");
 		}//svansen
 	}
 
@@ -240,7 +240,7 @@ function updateCanvas () {
 
 	ctx.clearRect(0,0,400,400);
 	if (startpause == 1) {
-		rektangel(ctx,x1,y1,10,10,"purple"); // ritar ut maten
+		rektangel(ctx,x1,y1,10,10,"green"); // ritar ut maten
 	}
 	
 	for (var i = 0; i < 20; i++) {
@@ -271,7 +271,7 @@ function reset () {
 	x2 = [];
 	y2 = [];
 	matTimer = 10;
-    document.getElementById("scorebox").innerHTML = "PoÃ¤ng: " + score + "<br>" + "Level: " + level + "<br>" + "Maten flyttas om: " + matTimer;
+    document.getElementById("scorebox").innerHTML = "Poäng: " + score + "<br>" + "Level: " + level + "<br>" + "Maten flyttas om: " + matTimer;
 	rektangel(ctx,x1,y1,10,10,"purple");
 
 }// Återställer alla värden och gör så att spelet återgår till startinställningar.

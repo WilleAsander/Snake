@@ -3,7 +3,6 @@ function rektangel(ctx, x, y, width, height, color)
 {
    ctx.fillStyle = color;
    ctx.fillRect(x, y, width, height);
-   
 }
 
 function cirkel(ctx, x, y, r, color, lineWidth, lineColor) 
