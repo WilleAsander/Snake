@@ -8,10 +8,24 @@
 </head>
 <body id="page">
 	<div id="arenaContainer">
-            <button id="startknapp" type="button">Start</button>
             <canvas id="arena" width="400px" height="400px"></canvas>
+            <button id="startknapp" type="button">Start</button>
             <div id="scorebox"></div>
-	</div>
+    </div>
+    <div class="about">
+        <h3>About</h3>
+        <div class="abouttext">
+            This is a variation of the classic game snake. The goal is to get as high of a score as possible. Every fifth food you collect takes you to the next level
+            where the speed at which you travel. This version adds a timer that when depleted moves the food to another location on the map. It also adds black obstacles that makes you
+            lose if you hit them.
+            <br>
+            <br>
+            The game is run on heroku and it uses Node and express to run the server.
+            <br>
+            <br>
+            <span class="fat">Wilhelm Åsander, W.E.I - 2018 &#9400;</span>
+        </div>
+    </div>
 
 <script src="/js/biblotek.js"></script>
 <script src="/js/snake.js"></script>

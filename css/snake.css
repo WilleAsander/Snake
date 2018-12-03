@@ -1,10 +1,40 @@
+body {
+    background:#dc99e5 ;
+}
+
 canvas {
     border: 2px black solid;
-    background-color: mediumspringgreen;
+    background-color: #9ce1fc;
 }
 
 #arenaContainer {
     width:402px;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#startknapp{
+    margin: 10px;
+}
+
+#scorebox {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.about {
+    width: 402px;
+    margin: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px black solid;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.fat {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1.1em;
 }
