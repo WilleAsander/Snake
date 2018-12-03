@@ -22,7 +22,7 @@ document.getElementById('page').addEventListener('keydown', keyListener);
 document.getElementById("startknapp").addEventListener('click', starter);
 document.getElementById("scorebox").innerHTML = "Poäng: " + score + "<br>" + "Level: " + level + "<br>" + "Maten flyttas om: " + matTimer;
 
-rektangel(ctx,x1,y1,10,10,"purple");
+rektangel(ctx,x1,y1,10,10,"#c12222");
 
 function starter () { // Ändrar värdet på startpause får att kunna byta startknappen till en stopknapp
 
@@ -61,7 +61,7 @@ function matFlyttare() {
 				y1 = (Math.floor(Math.random()*10))*40 + 10;
 			}
 		}
-		rektangel(ctx,x1,y1,10,10,"purple");
+		rektangel(ctx,x1,y1,10,10,"#c12222");
 		matTimer = 10;
 	}
 	
@@ -131,7 +131,7 @@ function svans () {
 	
 	for (var i = 0; i < xorm.length; i++) {
 		if (i==0) {
-			rektangel(ctx,xorm[0],yorm[0],10,10,"yellow");
+			rektangel(ctx,xorm[0],yorm[0],10,10,"#000000");
 		}//huvudet
 		else if (i%2==0) {
 			rektangel(ctx,xorm[i],yorm[i],10,10,"yellow");
@@ -240,7 +240,7 @@ function updateCanvas () {
 
 	ctx.clearRect(0,0,400,400);
 	if (startpause == 1) {
-		rektangel(ctx,x1,y1,10,10,"purple"); // ritar ut maten
+		rektangel(ctx,x1,y1,10,10,"#c12222"); // ritar ut maten
 	}
 	
 	for (var i = 0; i < 20; i++) {
@@ -272,6 +272,6 @@ function reset () {
 	y2 = [];
 	matTimer = 10;
     document.getElementById("scorebox").innerHTML = "Poäng: " + score + "<br>" + "Level: " + level + "<br>" + "Maten flyttas om: " + matTimer;
-	rektangel(ctx,x1,y1,10,10,"purple");
+	rektangel(ctx,x1,y1,10,10,"#c12222");
 
 }// Återställer alla värden och gör så att spelet återgår till startinställningar.
