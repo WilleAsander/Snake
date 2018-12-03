@@ -1,0 +1,10 @@
+canvas {
+    border: 1px black solid;
+    background-color: white;
+}
+
+#arenaContainer {
+    width:402px;
+    margin-left: auto;
+    margin-right: auto;
+}
